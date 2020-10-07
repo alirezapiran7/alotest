@@ -33,7 +33,7 @@ const products = ({ navigation, route }) => {
                             <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
                                 <TouchableOpacity style={{ backgroundColor: color.tint, borderRadius: metrics.s5, paddingHorizontal: metrics.s20, padding: metrics.s5 }}
                                     onPress={() => {
-                                        navigation.navigate(keys.map, { id: item.id })
+                                        navigation.navigate(keys.map, { product: item })
                                     }}>
                                     <Text style={{ color: color.white }}>خرید</Text>
                                 </TouchableOpacity>

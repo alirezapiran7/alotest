@@ -64,9 +64,11 @@ const Categories = ({ navigation }) => {
                     <FlatList
 
                         onLayout={(event) => {
-                            console.log('awsome ');
+                            console.log('awsome 2');
                             console.log(event.nativeEvent.layout);
                             setflatSize(event.nativeEvent.layout)
+                            console.log("width",(event.nativeEvent.layout.width - 32) / 2.0);
+                            console.log("hedight",(event.nativeEvent.layout.height - 48)/ 3.0);
                         }}
                         style={styles.list}
                         data={flatSize.height == -1 ? [] : mockData}

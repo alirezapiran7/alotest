@@ -2,8 +2,10 @@
     //storage
     apiToken:'apiToken',
     firstLunch:'firstLunch',
+    orderList:'orderList',
 
     //navigation
+    
     check:'check',
     mainStack:'mainStack',
     categories:'categories',

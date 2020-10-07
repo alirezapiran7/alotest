@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { StyleSheet, View, TouchableOpacity } from 'react-native'
+import React, { useState,useEffect } from 'react'
+import { StyleSheet, View, TouchableOpacity, FlatList } from 'react-native'
 import { Header } from 'react-native-elements'
 import { metrics, color } from '../../constants'
 import { IconX, ICON_TYPE } from '../../icons'
@@ -12,6 +12,18 @@ const Orders = ({ navigation }) => {
 
     const [segmentedIndex, setSegmentedIndex] = useState(2)
     const emptyList = "درحال حاضر هیچ در خواستی در حال انجام نیست"
+    const [counter, setCounter] = useState(0)
+    let interval = null
+    // useEffect(() => {
+    //     interval = setTimeout(() => {
+    //         console.log("inja");
+    //         setCounter(counter + 5);
+    //     }, 5000);
+
+    //     return () => clearTimeout(interval);
+    // }, [counter]);
+
+
 
     return (
         <View style={{ flex: 1 }}>
@@ -40,6 +52,31 @@ const Orders = ({ navigation }) => {
                 }}
             />
 
+            <FlatList
+                style={styles.list}
+                data={[]}
+                keyExtractor={item => item.id.toString()}
+                renderItem={({ item }) => (
+                    <View style={styles.listItem}>
+                        <Image source={{ uri: item.image }} style={{ width: 100, height: 100 }} />
+                        <View style={{ flex: 1, flexDirection: 'column', }}>
+                            <Text numberOfLines={2} ellipsizeMode='tail' style={{ marginTop: metrics.s8, height: 60, }}>{item.title}</Text>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
+                                <TouchableOpacity style={{ backgroundColor: color.tint, borderRadius: metrics.s5, paddingHorizontal: metrics.s20, padding: metrics.s5 }}
+                                    onPress={() => {
+                                        navigation.navigate(keys.map, { product: item })
+                                    }}>
+                                    <Text style={{ color: color.white }}>خرید</Text>
+                                </TouchableOpacity>
+                                <Text style={{ color: color.green400 }}>{item.price.toString()} تومان</Text>
+
+                            </View>
+                        </View>
+
+                    </View>
+                )
+                } />
+
             <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <IconX origin={ICON_TYPE.SimpleLineIcons}
                     name={'social-dropbox'}
@@ -59,4 +96,18 @@ const Orders = ({ navigation }) => {
 
 export default Orders
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    list: {
+        flex: 1,
+        marginBottom: metrics.s16,
+        marginHorizontal: metrics.s8
+    },
+    listItem: {
+        flexDirection: 'row-reverse',
+        padding: metrics.s10,
+        backgroundColor: color.white,
+        borderRadius: metrics.s10,
+        marginTop: metrics.s10,
+        marginHorizontal: metrics.s10
+    }
+})
