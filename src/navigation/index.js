@@ -4,9 +4,9 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 
 import mainStack from './mainStack'
-import Check from '../screens/Check'
-import Introduction from '../screens/Introduction'
-import Map from '../screens/main/Map'
+import Check from '../screens/check'
+import Introduction from '../screens/introduction'
+import Map from '../screens/main/map'
 
 import {keys} from '../constants'
 

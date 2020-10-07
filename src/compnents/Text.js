@@ -5,7 +5,7 @@ import { color, metrics } from '../constants'
 
 const RNText = (porps) => {
     return (
-        <Text style={[styles.text,porps.style]}>{porps.children}
+        <Text {...porps} style={[styles.text,porps.style]}>{porps.children}
         </Text>
     )
 }
