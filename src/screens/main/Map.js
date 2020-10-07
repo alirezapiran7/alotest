@@ -92,7 +92,7 @@ const map = ({ navigation, route }) => {
         const order = {
             ...product, time: d.getTime(), step: 0,
             latitude: location.latitude, longitude: location.longitude,
-            address: ''
+            address: '',id:d.getTime()
         }
 
         let save = await AsyncStorage.getItem(keys.orderList);

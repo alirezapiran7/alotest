@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "مد و پوشاک - مردانه",
-        "image": "https://collectionworld.in/wp-content/uploads/2019/10/Zebel-Bespoke-830x625-e1509303834935.jpg",
+        "image": "http://did1.ir/image/1.png",
         "product": [
             {
                 "id": 1,
@@ -57,7 +57,7 @@
     },
     {
         "id": 2,
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQb2ODtmaZrQ3mp3igggqpsbqNuF2azfeeoBw&usqp=CAU",
+        "image": "http://did1.ir/image/2.png",
         "title": "مد - ساعت مردانه",
         "product": [
             {
@@ -106,7 +106,7 @@
     },
     {
         "id": 3,
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIKQlUk3LMy0AgGwICSqTnFtUFsX6qiCGoaw&usqp=CAU",
+        "image": "http://did1.ir/image/3.png",
         "title": "کتاب چاپی",
         "product": [
             {
@@ -127,274 +127,274 @@
                 "id": 3,
                 "title": "کتاب خودت باش دختر اثر ریچل هالیس",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/4537013.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1982637,
-                "off": 51
+                "price": 3076750,
+                "off": 26
             },
             {
                 "id": 4,
                 "title": "https://dkstatics-public.digikala.com/digikala-products/4959682.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
                 "image": "کتاب خودت را به فنا نده اثر گری جان بیشاپ",
-                "price": 1264966,
-                "off": 13
+                "price": 109135,
+                "off": 72
             },
             {
                 "id": 5,
                 "title": "کتاب بیشعوری اثر خاویر کرمنت انتشارات پرثوآ",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/113521431.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 459407,
-                "off": 7
+                "price": 2843180,
+                "off": 76
             },
             {
                 "id": 6,
                 "title": "کتاب وقتی نیچه گریست اثر اروین د یالوم",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/3414513.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 3124860,
-                "off": 4
+                "price": 2957175,
+                "off": 2
             }
         ]
     },
     {
         "id": 4,
-        "image": "https://cdn.mos.cms.futurecdn.net/A4GDK27VMnz6LtFDy9yzk.jpg",
+        "image": "http://did1.ir/image/4.png",
         "title": " لپ تاپ",
         "product": [
             {
                 "id": 1,
                 "title": "پ تاپ 16 اینچی اپل مدل MacBook Pro MVVM2 2019 همراه با تاچ بار",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/114391682.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1347053,
-                "off": 44
+                "price": 1716395,
+                "off": 14
             },
             {
                 "id": 2,
                 "title": "لپ تاپ 16 اینچی اپل مدل MacBook Pro MVVK2 2019 همراه با تاچ بار",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/114389900.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2512598,
-                "off": 93
+                "price": 1198030,
+                "off": 45
             },
             {
                 "id": 3,
                 "title": "لپ تاپ 15 اینچی مایکروسافت مدل Surface Book 3- B",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/f22ade28b99f65aaf53ccb0d91c7547ce0517687_1595855055.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 998624,
-                "off": 33
+                "price": 889160,
+                "off": 25
             },
             {
                 "id": 4,
                 "title": "لپ تاپ 13 اینچی مایکروسافت مدل Surface Book 3- E",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/29f51cb64cd57db0971af143ea28887456f46b52_1600184871.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1061478,
-                "off": 37
+                "price": 3486346,
+                "off": 4
             },
             {
                 "id": 5,
                 "title": "لپ تاپ 16 اینچی اپل مدل MacBook Pro MVVJ2 2019 همراه با تاچ بار",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/115218076.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 834029,
-                "off": 43
+                "price": 2670921,
+                "off": 77
             },
             {
                 "id": 6,
                 "title": "لپ تاپ 16 اینچی اپل مدل MacBook Pro MVVL2 2019 همراه با تاچ بار",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/114389205.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1924285,
-                "off": 8
+                "price": 1463081,
+                "off": 93
             }
         ]
     },
     {
         "id": 5,
-        "image": "https://www.vancleefarpels.com/content/dam/vca/Collections/Jewelry/Family/Mobile/VCA-Page_Famille-Joaillerie-Vitrine-Mobile-2018.jpg.adapt.750.578.jpg",
+        "image": "http://did1.ir/image/7.png",
         "title": "زیورآلات زنانه",
         "product": [
             {
                 "id": 1,
                 "title": "گردنبند نقره زنانه طرح پری دریایی کد 01",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/110891802.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1383361,
-                "off": 58
+                "price": 2556658,
+                "off": 86
             },
             {
                 "id": 2,
                 "title": "گردنبند نقره شهر جواهر مدل SJ-N052",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/1863817.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 677837,
-                "off": 6
+                "price": 1341705,
+                "off": 53
             },
             {
                 "id": 3,
                 "title": "انگشتر نقره زنانه اقلیمه کد AN115",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/119242085.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1038037,
-                "off": 38
+                "price": 1972018,
+                "off": 88
             },
             {
                 "id": 4,
                 "title": "انگشتر نقره زنانه کد GP0330",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/111157930.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2751528,
-                "off": 23
+                "price": 1801330,
+                "off": 49
             },
             {
                 "id": 5,
                 "title": "دستبند نقره زنانه ریسه گالری مدل Ri3-H1074S",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/4210582.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 356521,
-                "off": 71
+                "price": 1608669,
+                "off": 36
             },
             {
                 "id": 6,
                 "title": "نیم ست نقره زنانه طرح گل کد FL 157",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/4871432.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2542549,
-                "off": 12
+                "price": 2261748,
+                "off": 81
             }
         ]
     },
     {
         "id": 6,
         "title": "TV",
-        "image": "https://static.dezeen.com/uploads/2020/08/xiaomi-mi-tv-lux-technology-design_dezeen_2364_hero-1-852x479.jpg",
+        "image": "http://did1.ir/image/8.png",
         "product": [
             {
                 "id": 1,
                 "title": "تلویزیون ال ای دی هوشمند جی پلاس مدل GTV-50KU722S سایز 50 اینچ",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/9d58e2d52a2bbca01b156702ab60612ef79eefdb_1596363623.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2612890,
-                "off": 28
+                "price": 355947,
+                "off": 16
             },
             {
                 "id": 2,
                 "title": "تلویزیون ال ای دی ال جی مدل 43LJ52100 سایز 43 اینچ",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/111869970.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2972988,
-                "off": 74
+                "price": 1107638,
+                "off": 36
             },
             {
                 "id": 3,
                 "title": "تلویزیون اولد هوشمند ال جی مدل OLED55C8GI سایز 55 اینچ",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/26ded157f9e8a5bac8d49b7020b08d6f53fcb2a9_1595051590.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1380876,
-                "off": 12
+                "price": 337341,
+                "off": 9
             },
             {
                 "id": 4,
                 "title": "تلویزیون ال ای دی جی پلاس مدل GTV-50KH512N سایز 50 اینچ",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/6af83f38257a07c6f64421ca27bb4d5b9d593c27_1597655667.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1415841,
-                "off": 91
+                "price": 130494,
+                "off": 46
             },
             {
                 "id": 5,
                 "title": "تلویزیون ال ای دی ایکس ویژن مدل 43XK580 سایز ۴۳ اینچ",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/87c4e181ef73f4b4197d29af825d007f135548b3_1598354438.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 3160866,
-                "off": 92
+                "price": 661387,
+                "off": 15
             },
             {
                 "id": 6,
                 "title": "تلویزیون ال ای دی هوشمند جی پلاس مدل GTV-43KH612N سایز 43 اینچ",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/a8fb2342799f8cb03fe8227228c41b67fe03ed46_1598413434.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 3227762,
-                "off": 63
+                "price": 1291383,
+                "off": 89
             }
         ]
     },
     {
         "id": 7,
         "title": "کنسول بازی ",
-        "image": "https://toranji.ir/wp-content/uploads/2019/08/Play-Station-5-3.jpg",
+        "image": "http://did1.ir/image/5.png",
         "product": [
             {
                 "id": 1,
                 "title": "کنسول بازی سونی مدل PlayStation Classic",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/95fed561cd7edecef46e56c720b19c9fec2b3c81_1596278722.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1412477,
-                "off": 99
+                "price": 199939,
+                "off": 39
             },
             {
                 "id": 2,
                 "title": "مجموعه کنسول بازی سونی مدل Playstation 4 Pro کد CUH-7216B Region 2 - ظرفیت 1 ترابایت",
                 "image": "https://dkstatics-public-2.digikala.com/digikala-products/110326321.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2560454,
-                "off": 14
+                "price": 2190461,
+                "off": 35
             },
             {
                 "id": 3,
                 "title": "کنسول بازی سونی مدل Playstation 4 Pro 2018 کد CUH-7216B Region 2 ظرفیت 1 ترابایت",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/4875306.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 299926,
-                "off": 22
+                "price": 1486544,
+                "off": 36
             },
             {
                 "id": 4,
                 "title": "کنسول بازی سونی مدل Playstation 4 Slim کد Region 2 CUH-2216A ظرفیت 500 گیگابایت",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/4263183.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 1971851,
-                "off": 66
+                "price": 3177711,
+                "off": 0
             },
             {
                 "id": 5,
                 "title": "مجموعه کنسول بازی سونی مدل Playstation 4 Slim ریجن 2 کد CUH-2216B ظرفیت 1 ترابایت",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/112215165.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2228148,
-                "off": 4
+                "price": 1214025,
+                "off": 46
             },
             {
                 "id": 6,
                 "title": "کنسول بازی قابل حمل مدل 2SUP",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/62e5f34568d42dbed2dadbb4ed36a2d420fe41e0_1595057760.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2735757,
-                "off": 28
+                "price": 1011242,
+                "off": 51
             }
         ]
     },
     {
         "id": 8,
         "title": "آلات موسیقی ایرانی",
-        "image": "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2017/08/09095827/08082017_Guitar_01.jpg",
+        "image": "http://did1.ir/image/6.png",
         "product": [
             {
                 "id": 1,
                 "title": "سه تار مکتب مدل 001",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/112835448.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 848958,
-                "off": 8
+                "price": 1634383,
+                "off": 4
             },
             {
                 "id": 2,
                 "title": "سه تار عزیزی",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/1763848.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 800872,
-                "off": 70
+                "price": 3212863,
+                "off": 63
             },
             {
                 "id": 3,
                 "title": "",
                 "image": "",
-                "price": 94373,
-                "off": 8
+                "price": 3279122,
+                "off": 69
             },
             {
                 "id": 4,
                 "title": "تنبک حلمی مدل فایبر قهوه‌ای سوخته با پوست شتر سایز 28",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/985288.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 2141908,
-                "off": 58
+                "price": 241257,
+                "off": 84
             },
             {
                 "id": 5,
                 "title": "سنتور عشقی مدل 2 مهر",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/4024004.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 319056,
-                "off": 16
+                "price": 2699170,
+                "off": 84
             },
             {
                 "id": 6,
                 "title": "نی سابیزا مدل 3 مهر کوک سل",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/3654223.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "price": 3166207,
-                "off": 52
+                "price": 2721692,
+                "off": 91
             }
         ]
     }
