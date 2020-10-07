@@ -11,8 +11,8 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
-  View,
   Text,
+  View,
   StatusBar,
 } from 'react-native';
 
@@ -23,16 +23,22 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+
+import { Root } from 'native-base'
+import { Post } from './src/api'
+import Navigation from './src/navigation/index'
+import { color } from './src/constants';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-       
-       
-      </SafeAreaView>
+      <View style={{flex:1}}>
+        <Root>
+          <StatusBar translucent={true} barStyle={'dark-content'} backgroundColor={color.transparent} />
+          <Navigation />
+
+        </Root>
+      </View>
     </>
   );
 };
