@@ -1,6 +1,6 @@
 
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React ,{useEffect}from 'react'
+import { StyleSheet, Text, View ,Alert} from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { keys } from '../constants';
 import categories from '../screens/main/categories'
@@ -11,11 +11,10 @@ import { ICON_TYPE } from '../icons';
 
 const Tab = createBottomTabNavigator();
 
+
 const bottomNavigation = () => {
     return (
         <Tab.Navigator initialRouteName={keys.categories}>
-
-           
 
             <Tab.Screen name={keys.myOrders} component={orders}
             options={{

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, View, TouchableOpacity, FlatList, Image } from 'react-native'
+import { StyleSheet, View, TouchableOpacity, FlatList, Image, Alert } from 'react-native'
 import { Header } from 'react-native-elements'
 import { metrics, color, keys } from '../../constants'
 import { IconX, ICON_TYPE } from '../../icons'
@@ -19,6 +19,7 @@ const Orders = ({ navigation }) => {
     let interval = null
 
     const getOrders = async () => {
+    
         let now = new Date().getTime();
         let save = await AsyncStorage.getItem(keys.orderList);
         console.log(save);
@@ -39,14 +40,19 @@ const Orders = ({ navigation }) => {
 
             })
             await AsyncStorage.setItem(keys.orderList, JSON.stringify(updateOrders));
-            setOrderList(updateOrders)
-
-
+            setOrderList(updateOrders.reverse())
         }
     }
+    useEffect(() => {
+        
+        return () => {
+            
+        }
+    }, [])
 
 
     useEffect(() => {
+        getOrders();
         interval = setTimeout(() => {
             console.log("inja");
             setCounter(counter + 5);
@@ -108,6 +114,7 @@ const Orders = ({ navigation }) => {
                 style={styles.list}
                 data={orderList}
                 keyExtractor={item => item.id.toString()}
+                re
                 renderItem={({ item }) => (
                     <View style={{
                         padding: metrics.s10,
@@ -179,37 +186,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
     },
-    navBar: {
-        flexDirection: 'row',
-        marginHorizontal: metrics.s16,
-        marginTop: metrics.s8,
-        padding: metrics.s10,
-        borderRadius: metrics.s10,
-        height: 50,
-        backgroundColor: '#fff',
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.18,
-        shadowRadius: 1.00,
-        elevation: 1,
-    },
-    score: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'center'
-    },
-    scoreAmount: {
-        color: color.tint,
-        marginHorizontal: metrics.s5
-    }, price:
-    {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-    },
+
+    
 })

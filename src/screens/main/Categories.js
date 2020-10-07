@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react'
-import { ActivityIndicator, StyleSheet, View, Image, FlatList, TouchableOpacity } from 'react-native'
+import React, { useEffect, useRef, useState } from 'react'
+import { ActivityIndicator, StyleSheet, View, Image, FlatList, TouchableOpacity,Alert } from 'react-native'
 import Text from '../../compnents/Text'
 import { color, keys, metrics } from '../../constants'
 import { IconX, ICON_TYPE } from '../../icons'
@@ -7,14 +7,18 @@ import Carousel from 'react-native-snap-carousel'
 import globalStyle from '../../styles'
 const mockData = require('../../mockData.json');
 
-const Categories = ({ navigation }) => {
+const Categories = ({ navigation,route }) => {
 
     const refCarousel = useRef(null)
     const [flatSize, setflatSize] = useState({ height: -1, width: -1, x: 0, y: 0 })
 
     const carouselItem = ({ item }) => {
         return (
-            <Image source={{ uri: item.image }} style={styles.image} />
+            <TouchableOpacity style={styles.image} onPress={()=>{
+                navigation.navigate(keys.products, { id: item.id })
+            }}>
+            <Image source={{ uri: item.image }} style={{flex: 1,overflow:'hidden'}} />
+            </TouchableOpacity>
         )
     }
 
@@ -82,7 +86,7 @@ const Categories = ({ navigation }) => {
                                 navigation.navigate(keys.products, { id: item.id })
                             }}>
                                 <Image style={{ flex: 1, }} source={{ uri: item.image }} />
-                                <Text style={{ flexGrow: 1, position: 'absolute', bottom: metrics.s16, left: 0, right: 0, textAlign: 'center' }}> {item.title}</Text>
+                                {/* <Text style={{ flexGrow: 1, position: 'absolute', bottom: metrics.s16, left: 0, right: 0, textAlign: 'center' }}> {item.title}</Text> */}
                             </TouchableOpacity>
 
                         )

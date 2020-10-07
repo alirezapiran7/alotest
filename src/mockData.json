@@ -19,13 +19,6 @@
                 "off": "12"
             },
             {
-                "id": 3,
-                "title": "",
-                "image": "",
-                "price": "",
-                "off": ""
-            },
-            {
                 "id": 4,
                 "title": "کاپشن مردانه نورث فیس مدل Denali Fleece-001",
                 "image": "https://dkstatics-public.digikala.com/digikala-products/117596472.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
@@ -132,8 +125,8 @@
             },
             {
                 "id": 4,
-                "title": "https://dkstatics-public.digikala.com/digikala-products/4959682.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
-                "image": "کتاب خودت را به فنا نده اثر گری جان بیشاپ",
+                "image": "https://dkstatics-public.digikala.com/digikala-products/4959682.jpg?x-oss-process=image/resize,m_lfit,h_600,w_600/quality,q_90",
+                "title": "کتاب خودت را به فنا نده اثر گری جان بیشاپ",
                 "price": 109135,
                 "off": 72
             },
@@ -368,13 +361,7 @@
                 "price": 3212863,
                 "off": 63
             },
-            {
-                "id": 3,
-                "title": "",
-                "image": "",
-                "price": 3279122,
-                "off": 69
-            },
+            
             {
                 "id": 4,
                 "title": "تنبک حلمی مدل فایبر قهوه‌ای سوخته با پوست شتر سایز 28",

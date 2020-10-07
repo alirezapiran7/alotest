@@ -88,7 +88,6 @@ const map = ({ navigation, route }) => {
 
     const saveOrder = async () => {
         const d = new Date()
-
         const order = {
             ...product, time: d.getTime(), step: 0,
             latitude: location.latitude, longitude: location.longitude,
@@ -109,6 +108,18 @@ const map = ({ navigation, route }) => {
         const test = await AsyncStorage.getItem(keys.orderList);
         
         navigation.dispatch(StackActions.popToTop());
+        navigation.navigate(keys.myOrders)
+        // navigation.reset({
+        //     index: 0,
+        //     routes: [{ name: keys.mainStack ,id:'from map'}],
+        //   });
+
+        // const resetAction = navigation.reset({
+        //     index: 0,
+        //     actions: [
+        //         navigation.navigate({ routeName: keys.mainStack, params: { init: 'order' } }),  
+        //     ],
+        //   });
 
 
     }
