@@ -28,16 +28,16 @@ const products = ({ navigation, route }) => {
                 renderItem={({ item }) => (
                     <View style={styles.listItem}>
                         <Image source={{ uri: item.image }} style={{ width: 100, height: 100 }} />
-                        <View style={{ flex: 1, flexDirection: 'column', }}>
-                            <Text numberOfLines={2} ellipsizeMode='tail' style={{ marginTop: metrics.s8, height: 60, }}>{item.title}</Text>
+                        <View style={{ flex: 1, marginHorizontal: metrics.s8, flexDirection: 'column',}}>
+                            <Text numberOfLines={2} ellipsizeMode='tail' style={styles.txtTitle }>{item.title}</Text>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
-                                <TouchableOpacity style={{ backgroundColor: color.tint, borderRadius: metrics.s5, paddingHorizontal: metrics.s20, padding: metrics.s5 }}
+                                <TouchableOpacity style={styles.cartButton}
                                     onPress={() => {
                                         navigation.navigate(keys.map, { product: item })
                                     }}>
                                     <Text style={{ color: color.white }}>خرید</Text>
                                 </TouchableOpacity>
-                                <Text style={{ color: color.green400 }}>{item.price.toString()} تومان</Text>
+                                <Text style={{ color: color.green400, fontSize: metrics.s12 }}>{item.price.toString()} تومان</Text>
 
                             </View>
                         </View>
@@ -63,6 +63,25 @@ const styles = StyleSheet.create({
         backgroundColor: color.white,
         borderRadius: metrics.s10,
         marginTop: metrics.s10,
-        marginHorizontal: metrics.s10
+        marginHorizontal: metrics.s10,
+        
+    },
+    cartButton: {
+        backgroundColor: color.tint,
+        borderRadius: metrics.s5,
+        paddingHorizontal: metrics.s20,
+        padding: metrics.s5
+    },
+    txtTitle:{
+        backgroundColor: color.tint, 
+        borderRadius: metrics.s5,
+         paddingHorizontal: metrics.s20, 
+         padding: metrics.s5
+    },
+    orderBottom: {
+        flex: 1, marginHorizontal: metrics.s8, flexDirection: 'column',
+    },
+    txtTitle: {
+        marginTop: metrics.s8, height: 60, textAlign: 'right', color: color.title_dark
     }
 })

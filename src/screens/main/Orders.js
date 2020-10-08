@@ -81,6 +81,25 @@ const Orders = ({ navigation }) => {
                 break;
         }
     }
+    const stepColor = (step) => {
+        switch (step) {
+            case 0:
+                return color.hint
+                break;
+            case 1:
+                return color.orange400
+                break;
+            case 2:
+                return color.tint
+                break;
+            case 3:
+                return color.green400
+                break;
+
+            default:
+                break;
+        }
+    }
 
 
     return (
@@ -98,17 +117,7 @@ const Orders = ({ navigation }) => {
                         size={metrics.icons.smallx} />
                 </TouchableOpacity>} />
 
-            <SegmentedControl
-                values={['رزرو شده', 'ناموفق', 'درحال انجام']}
-                selectedIndex={segmentedIndex}
-                style={{ height: 35, marginTop: metrics.s5, marginHorizontal: metrics.s16, backgroundColor: color.white }}
-                tintColor={color.tint}
-                fontStyle={{ color: color.tint, }}
-                activeFontStyle={{ color: color.white }}
-                onChange={(event) => {
-                    setSegmentedIndex(event.nativeEvent.selectedSegmentIndex)
-                }}
-            />
+            
 
             {orderList.length != 0 && <FlatList
                 style={styles.list}
@@ -125,19 +134,19 @@ const Orders = ({ navigation }) => {
                     }} >
                         <View style={styles.listItem}>
                             <Image source={{ uri: item.image }} style={{ width: 100, height: 100 }} />
-                            <Text ellipsizeMode='tail' style={{ marginTop: metrics.s8, flex: 1 }}>{item.title}</Text>
-                            <Text style={{ marginTop: metrics.s8, }}>{new Date(item.time).toLocaleTimeString()}</Text>
+                            <Text ellipsizeMode='tail' style={{ marginTop: metrics.s8, flex: 1 ,color:color.title_dark}}>{item.title}</Text>
+                            <Text style={{ marginTop: metrics.s8,fontSize:metrics.s12, }}>{new Date(item.time).toLocaleTimeString()}</Text>
                         </View>
                         <View style={{ height: 1, width: '90%', alignSelf: 'center', backgroundColor: color.hint, opacity: 0.1, marginVertical: metrics.s8 }}></View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
 
                             <View style={{ flexDirection: 'column',alignItems: 'center' }}>
-                                <Text style={{}}>وضعیت</Text>
-                                <Text style={{}}>{convertStep(item.step)}</Text>
+                                <Text style={{color:color.title_dark}}>وضعیت</Text>
+                                <Text style={{fontSize:metrics.s12,color:stepColor(item.step)}}>{convertStep(item.step)}</Text>
                             </View>
                             <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-                                <Text style={{}}>هزینه</Text>
-                                <Text style={{}}>{item.price} تومان</Text>
+                                <Text style={{color:color.title_dark}}>هزینه</Text>
+                                <Text style={{fontSize:metrics.s12,color:color.green400}}>{item.price} تومان</Text>
                             </View>
 
 
@@ -181,7 +190,7 @@ const styles = StyleSheet.create({
         marginHorizontal: metrics.s8
     },
     listItem: {
-        flexDirection: 'row-reverse',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
 

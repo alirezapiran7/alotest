@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { StyleSheet, View, TouchableOpacity, KeyboardAvoidingView, ScrollView, Alert, PermissionsAndroid, Platform, Keyboard } from 'react-native'
 import Animated from 'react-native-reanimated';
 
-import { color, metrics, regax, keys } from '../../constants';
+import { color, metrics, keys } from '../../constants';
 import { Button } from 'react-native-elements'
 import { IconX, ICON_TYPE } from '../../icons';
 import globalStyle from '../../styles'
@@ -15,23 +15,19 @@ import { StackActions } from '@react-navigation/native'
 
 
 
+
 const map = ({ navigation, route }) => {
 
     const { product } = route.params
+
     const [location, setLocation] = useState({
         latitude: 35.699730,
         longitude: 51.336591,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
     })
-    const [initialLocation, setInitialLocation] = useState({
-        latitude: 35.699730,
-        longitude: 51.336591,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-    })
 
-
+    const [address, setAddress] = useState('')
 
     const requestCameraPermission = async () => {
         try {
@@ -41,22 +37,22 @@ const map = ({ navigation, route }) => {
             if (granted === PermissionsAndroid.RESULTS.GRANTED) {
                 Geolocation.getCurrentPosition(info => {
                     if (info != null) {
-                        setInitialLocation({
+                        setLocation({
                             latitude: info.coords.latitude, longitude: info.coords.longitude, latitudeDelta: 0.0922,
                             longitudeDelta: 0.0421
                         })
                     } else {
-                        Alert.alert('null')
+
                     }
 
                 });
             } else {
-                console.log("location permission denied");
-                Alert.alert('null')
+
+
             }
         } catch (err) {
-            console.warn(err);
-            Alert.alert('null')
+
+
         }
     };
 
@@ -69,29 +65,35 @@ const map = ({ navigation, route }) => {
 
         Geolocation.getCurrentPosition(info => {
             if (info != null) {
-                setInitialLocation({
+                setLocation({
                     latitude: info.coords.latitude, longitude: info.coords.longitude, latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
                 })
             } else {
-                Alert.alert('null')
+
             }
         });
     }
 
     useEffect(() => {
         request()
+
         return () => {
 
         }
     }, [])
 
     const saveOrder = async () => {
+
         const d = new Date()
         const order = {
-            ...product, time: d.getTime(), step: 0,
-            latitude: location.latitude, longitude: location.longitude,
-            address: '',id:d.getTime()
+            ...product,
+            time: d.getTime(),
+            step: 0,
+            latitude: location.latitude,
+            longitude: location.longitude,
+            address: '',
+            id: d.getTime()
         }
 
         let save = await AsyncStorage.getItem(keys.orderList);
@@ -106,64 +108,40 @@ const map = ({ navigation, route }) => {
             await AsyncStorage.setItem(keys.orderList, JSON.stringify(orders))
         }
         const test = await AsyncStorage.getItem(keys.orderList);
-        
+
         navigation.dispatch(StackActions.popToTop());
         navigation.navigate(keys.myOrders)
-        // navigation.reset({
-        //     index: 0,
-        //     routes: [{ name: keys.mainStack ,id:'from map'}],
-        //   });
-
-        // const resetAction = navigation.reset({
-        //     index: 0,
-        //     actions: [
-        //         navigation.navigate({ routeName: keys.mainStack, params: { init: 'order' } }),  
-        //     ],
-        //   });
-
-
     }
-    const setRegion = (region) => {
-        console.log('region');
-        console.log(region);
-
-    }
-    const mapRef = useRef()
-
 
     return (
-        <View style={{ flex: 1, flexDirection: 'column', backgroundColor: color.white }}>
+        <View style={styles.continer}>
 
             <View style={{ flex: 1, marginBottom: -metrics.s40 }}>
 
                 <MapView style={{ flex: 1 }}
-                    ref={mapRef}
+
                     provider={PROVIDER_GOOGLE}
                     showsUserLocation={true}
                     customMapStyle={mapStyle}
-                     initialRegion={location}
-                    region={location}
-                    onRegionChange={region => console.log(region) }
+                    initialRegion={location}
+                    // region={location}
                     onRegionChangeComplete={(region) => {
-                         setLocation({...location,latitude:region.latitude,longitude:region.longitude,
-                        latitudeDelta:region.latitudeDelta,longitudeDelta:region.longitudeDelta})
+                        setLocation({
+                            ...location, latitude: region.latitude,
+                             longitude: region.longitude,
+                            latitudeDelta: region.latitudeDelta,
+                             longitudeDelta: region.longitudeDelta
+                        })
                     }
                     }
                 />
-                <IconX style={{
-                    position: 'absolute', left: '50%', top: '50%', width: metrics.s40, height: metrics.s40,
-                    marginBottom: -metrics.s40
-
-                }}
+                <IconX style={styles.mapCnterIcon}
                     origin={ICON_TYPE.FONT_AWESOME5}
                     name={'map-marker-alt'} color={color.orangeA400} size={metrics.icons.smallx} />
 
             </View>
 
-            <TouchableOpacity style={{
-                position: 'absolute', top: metrics.statusBar, right: metrics.s16, width: metrics.s40, height: metrics.s40, borderRadius: metrics.s20, backgroundColor: color.white
-                , justifyContent: 'center', alignItems: 'center'
-            }} onPress={() => {
+            <TouchableOpacity style={styles.backButton} onPress={() => {
                 navigation.goBack()
 
             }}>
@@ -174,10 +152,7 @@ const map = ({ navigation, route }) => {
                 />
             </TouchableOpacity>
 
-            <TouchableOpacity style={{
-                position: 'absolute', bottom: 160, right: metrics.s16, width: metrics.s40, height: metrics.s40, borderRadius: metrics.s20, backgroundColor: color.white
-                , justifyContent: 'center', alignItems: 'center'
-            }} onPress={() => {
+            <TouchableOpacity style={styles.myLocation} onPress={() => {
 
                 request();
             }}>
@@ -210,7 +185,7 @@ const map = ({ navigation, route }) => {
                         color={color.orange300}
                         size={metrics.icons.small}
                     />
-                    <Text style={{ textAlign: 'right' }}>تهران خیابان دانشگاه</Text>
+                    <Text style={{ textAlign: 'right' }}>نیاز به api google</Text>
                     <TouchableOpacity style={{}} onPress={() => {
 
                     }}>
@@ -246,5 +221,34 @@ const map = ({ navigation, route }) => {
 export default map
 
 const styles = StyleSheet.create({
+    continer: {
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: color.white
+    },
+    mapCnterIcon: {
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        width: metrics.s40,
+        height: metrics.s40,
+        marginBottom: -metrics.s40
+    },
+    backButton:{
+        position: 'absolute', 
+        top: metrics.statusBar,
+         right: metrics.s16, 
+         width: metrics.s40, 
+         height: metrics.s40, 
+         borderRadius: metrics.s20, 
+         backgroundColor: color.white
+        , justifyContent: 'center',
+         alignItems: 'center'
+    },myLocation:{
+        position: 'absolute',
+         bottom: 160, 
+         right: metrics.s16, width: metrics.s40, height: metrics.s40, borderRadius: metrics.s20, backgroundColor: color.white
+        , justifyContent: 'center', alignItems: 'center'
+    }
 
 })

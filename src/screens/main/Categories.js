@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { ActivityIndicator, StyleSheet, View, Image, FlatList, TouchableOpacity,Alert } from 'react-native'
+import { ActivityIndicator, StyleSheet, View, Image, FlatList, TouchableOpacity, Alert } from 'react-native'
 import Text from '../../compnents/Text'
 import { color, keys, metrics } from '../../constants'
 import { IconX, ICON_TYPE } from '../../icons'
@@ -7,17 +7,17 @@ import Carousel from 'react-native-snap-carousel'
 import globalStyle from '../../styles'
 const mockData = require('../../mockData.json');
 
-const Categories = ({ navigation,route }) => {
+const Categories = ({ navigation, route }) => {
 
     const refCarousel = useRef(null)
     const [flatSize, setflatSize] = useState({ height: -1, width: -1, x: 0, y: 0 })
 
     const carouselItem = ({ item }) => {
         return (
-            <TouchableOpacity style={styles.image} onPress={()=>{
+            <TouchableOpacity style={styles.image} onPress={() => {
                 navigation.navigate(keys.products, { id: item.id })
             }}>
-            <Image source={{ uri: item.image }} style={{flex: 1,overflow:'hidden'}} />
+                <Image source={{ uri: item.image }} style={{ flex: 1, overflow: 'hidden' }} />
             </TouchableOpacity>
         )
     }
@@ -71,15 +71,15 @@ const Categories = ({ navigation,route }) => {
                             console.log('awsome 2');
                             console.log(event.nativeEvent.layout);
                             setflatSize(event.nativeEvent.layout)
-                            console.log("width",(event.nativeEvent.layout.width - 32) / 2.0);
-                            console.log("hedight",(event.nativeEvent.layout.height - 48)/ 3.0);
+                            console.log("width", (event.nativeEvent.layout.width - 32) / 2.0);
+                            console.log("hedight", (event.nativeEvent.layout.height - 48) / 3.0);
                         }}
                         style={styles.list}
                         data={flatSize.height == -1 ? [] : mockData}
                         numColumns={2}
                         keyExtractor={item => item.id.toString()}
                         renderItem={({ item }) => (
-                            <TouchableOpacity style={[styles.listItem,{
+                            <TouchableOpacity style={[styles.listItem, {
                                 width: (flatSize.width - 32) / 2.0,
                                 height: (flatSize.height - 48) / 3.0,
                             }]} onPress={() => {
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     },
     list: {
         flex: 1,
-        marginBottom: metrics.s16,
+
         marginHorizontal: metrics.s8
     },
     listItem: {
